@@ -1,3 +1,5 @@
+@import '../../app.scss';
+
 .navbar{
     height: 100px;
 
@@ -9,12 +11,29 @@
         height: 100%;
         max-width: 1024px;
         margin: auto;
-    }
-    .social{
-        display: flex;
-        gap: 10px;
+
+
+        @include mobile{
+            justify-content: flex-end;
+            padding: 0 20px;
+        }
+
+
+        h2{
+            font-weight: bold;
+            @include mobile{
+                display: none;
+            }
+        }
+
+
+        .social{
+            display: flex;
+            gap: 10px;
+        
+        }
     
     }
-
+    
    
 }

@@ -1,13 +1,35 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Link, animateScroll as scroll } from 'react-scroll'
 const Leenk = () => {
 
   const items =[
-    "Homepage",
-    "Services",
-    "Portfolio",
-    "Contact",
-    "About"
+
+    {
+      id: "homepage",
+      name:"Homepage",
+    },
+
+    {
+      id:"services",
+   
+      name:"Services"
+    },
+
+    {
+      id:"portfolio",
+      name:"portfolio"
+    },
+    {
+      id:"contact",
+      name:"Contact"
+    },
+
+    {
+      id:"about",
+      name:"About"
+    }
+    
   ]
   const variants = {
     open:{
@@ -41,9 +63,12 @@ const Leenk = () => {
   return (
     <motion.div className='links' variants={variants}>
       {items.map((item)=>(
-        <motion.a href={`${item}`} variants={itemVariants} whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
-          {item}
-        </motion.a>
+        <Link to={item.id} smooth={true} duration={300} >
+          <motion.p style={{cursor:"pointer"}} variants={itemVariants} whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
+          {item.name}
+        </motion.p>
+        </Link>
+        
       ))}
     </motion.div>
   )

@@ -1,3 +1,5 @@
+@import '../../app.scss';
+
 .services{
     background: linear-gradient(180deg, #0c0c1d, #111132);
     height: 100%;
@@ -14,16 +16,35 @@
         align-items: center;
         gap: 20px;
 
+        @include mobile{
+            // align-self: center;
+            // text-align: center;
+            flex-direction: column;
+
+            padding-right: 10px;
+            padding-top: 20px;
+        }
+
         p{
             font-weight: 200;
             font-size: 20px;
             text-align: right;
+
+                
+        @include mobile{
+            font-size: 16px;
+        }
+
         }
 
         hr{
             width: 300px;
             border: none;
             border-top: 0.5px solid gray;
+
+            @include mobile{
+                width: 200px;
+            }
         }
     }
 
@@ -33,10 +54,23 @@
         flex-direction: column;
         align-items: center;
 
+        
+        @include mobile{
+            width: 100%;
+        }
+
         .title{
             display: flex;
             gap: 20px;
             align-items: center;
+
+
+            
+            @include mobile{
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
 
 
             img{
@@ -44,11 +78,23 @@
                 height: 50px;
                 border-radius: 50px;
                 object-fit: cover;
+
+                    
+            @include mobile{
+                width: 100px;
+                height: 40px;
+            }
             }
 
             h1{
                 font-size: 76px;
                 font-weight: 100;
+
+                
+            @include mobile{
+                font-size: 36px;
+            }
+
             }
             button{
             // width: 120px;
@@ -59,6 +105,12 @@
             font-size: 20px;
             cursor: pointer;
             padding: 0 20px;
+
+                
+            @include mobile{
+             padding: 0 10px;   
+             font-size: 16px;
+            }
             }
             
         }
@@ -70,6 +122,15 @@
         max-width: 660px;
         margin: auto;
 
+        @include mobile{
+            flex-direction: column;
+            width: 100%;
+            margin-top: 20px;
+            
+           }
+
+
+
         .box{
             padding: 20px;
             width: 400px;
@@ -78,6 +139,17 @@
             flex-direction: column;
             // justify-content: space-between;
             gap: 20px;
+
+            @include mobile{
+            width: 280px;
+            margin: auto;
+            border: none;
+            padding: 0;
+            margin-bottom: 20px;
+            gap: 10px;
+           
+            }
+ 
         }
     }
 }
