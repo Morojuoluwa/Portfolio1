@@ -10,21 +10,45 @@
         max-width: 1024px;
         height: 100%;
         margin: auto;
+        display: flex;
+
+        @include mobile{
+            flex-direction: column;
+        }
+       
+
+        @include small{
+            display: flex;
+            flex-direction: column;
+        }
 
         .textContainer{
-            height: 100%;
-            width: 50%;
+            // height: 100%;
+            // width: 50%;
             display: flex;
+            flex: 1;
             justify-content: center;
             flex-direction: column;
             gap: 40px;
+            padding: 10px 0;
 
             @include mobile{
-                height: 50%;
-                width: 100%;
+                // height: 50%;
+                // width: 100%;
                 gap: 20px;
+          
                 align-items: center;
                 text-align: center;
+            }
+
+            @include small{
+                // height: 45%;
+                // width: 100%;
+                gap: 20px;
+                // background-color: yellowgreen;
+                align-items: center;
+                text-align: center;
+                padding-bottom: 0;
             }
 
             h2{
@@ -55,17 +79,24 @@
     }
 
     .imgContainer{
-        height:100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-right: 20px;
+        // height:100%;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // margin-right: 20px;
 
+        flex: 1;
+        width: 80%;
+        margin: auto;
 
         img{
             width: 100%;
           height: 100%;
           object-fit: cover;
+
+        //   @include mobile{
+        //     z-index: 999;
+        //   }
         }
 
         @include mobile{
@@ -73,8 +104,20 @@
             width: 100%;
             top: unset;
             bottom: 0;
+          
             margin: 0 ;
             padding: 0 30px;
+        }
+
+        @include small{
+            // height: 50%;
+            // width: 100%;
+            // top: unset;
+            // bottom: 0;
+          
+            // margin: 0 ;
+            // padding: 0 30px;
+
         }
     }
    

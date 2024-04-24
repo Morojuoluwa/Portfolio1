@@ -46,14 +46,16 @@ const Hero = () => {
                 </motion.div>
 
             </motion.div>
+
+                
+            <div className="imgContainer">
+                <img className='emg' src='/pic.png'/>
+            </div>
         </div>
         <motion.div className="slid" variants={slideVariant} initial="initial" animate="animate">
             Content creator Influencer Gamer
         </motion.div>
         
-        <div className="imgContainer">
-            <img className='emg' src='/pic.png'/>
-        </div>
       
     </div>
   )

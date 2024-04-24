@@ -19,18 +19,6 @@ a{
     color: inherit;
   }
 
-  .test{
-    display: flex;
-
-
-    .sect{
-
-        // flex: 1;
-        padding-left: 2%;
-       
-    }
-  }
-
 section{
     height: 100vh;
     width: 100vw;
@@ -45,7 +33,24 @@ a{
 }
 
 @mixin mobile{
-    @media (max-width:738px){
+    @media (max-width:640px){
         @content
     }
 }
+
+@mixin small {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+// @mixin small-screen {
+//     @media (max-width:768px){
+//         @content
+//     }
+
+// }
+
+// @mixin large{
+    
+// }

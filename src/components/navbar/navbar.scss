@@ -2,6 +2,7 @@
 
 .navbar{
     height: 100px;
+    
 
     .wrapper{
        
@@ -11,6 +12,8 @@
         height: 100%;
         max-width: 1024px;
         margin: auto;
+    
+       
 
 
         @include mobile{
