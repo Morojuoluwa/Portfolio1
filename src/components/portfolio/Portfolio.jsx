@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import './portfolio.scss'
+import { Link } from 'react-router-dom'
 
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 
@@ -7,24 +8,46 @@ const Portfolio = () => {
     const items = [
         {
             id:1,
-            title:"merch store",
-            img: "https://images.pexels.com/photos/18156147/pexels-photo-18156147/free-photo-of-woman-wearing-wedding-dress-sitting-on-concrete-block.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repudiandae cumque debitis magnam deserunt asperiores ipsa optio dignissimos incidunt facere."
+            title:"IMDb clone",
+            img: "https://cdn.geekwire.com/wp-content/uploads/2022/04/Screen-Shot-2022-04-13-at-8.30.23-AM.png",
+            desc: "This is an IMDB clone web application built with Next js, Tailwind CSS, and the Movie Database API. It seeks to imitate the essential features and layout of IMDb, enabling users to explore and search for movies, view information about individual films, and find trending and top rated movies.",
+            path: "https://imdb-clone-zdqrs.vercel.app/"
         },
 
         {
             id:2,
-            title:"ecommerce",
-            img: "https://images.pexels.com/photos/15045040/pexels-photo-15045040/free-photo-of-man-standing-on-a-beach-in-a-suit.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repudiandae cumque debitis magnam deserunt asperiores ipsa optio dignissimos incidunt facere."
+            title:"Gemini Clone",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_98J90IpOcv9fo2Cxk5pcrdgLrZw-5EaX_g&s",
+            desc: "This project is a clone of Gemini, an artificial intelligence chatbot, built with React js, tailwind css, context api, swiper js, and Gemini Api. This app, powered by gemini API, provides a personalized assistance and conversational interface to users",
+            path:"https://gemini-sigma-puce.vercel.app/"
+
+           
         },
 
         {
             id:3,
-            title:"movie rating app",
-            img: "https://images.pexels.com/photos/14894306/pexels-photo-14894306.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repudiandae cumque debitis magnam deserunt asperiores ipsa optio dignissimos incidunt facere."
+            title:"Nike Landing Page",
+            img: "https://cdn.dribbble.com/users/3496468/screenshots/17614059/nike_landing_page_concept.png",
+            desc: "Built this Nike landing page with  react js, tailwind css and framer-motion.",
+            path:"https://nike-landing-page-psi-two.vercel.app/"
+        },
+
+        {
+            id:4,
+            title: "Youtube Clone",
+            img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0vHYjHhrB5lAx7KnOgTmJLSvqSgBq9j0r-Q&s",
+            desc:"This is a YouTube clone web application built with React, Tailwind CSS, and the YouTube Data API. The project allows users to watch videos, select different video categories, and view video details such as likes, views, and comments.",
+            path:"https://youtube-five-gamma.vercel.app/"
+        },
+
+        {
+            id:5,
+            title: "Gadget Store",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs-Pkocjdkl19-YFEa45dFpqR14m3dV_azGQ&s",
+            desc: "Built this Ecommerce website with React js, TailwindCss, Redux and framer motion. This web app allows users to have access to a variety of elctronic gadgets, add items and remove items from cart and a checkout process was also implemented",
+            path:"https://sp-gadget-store.vercel.app/"
         }
+
     ]
 
     const Single = ({item}) =>{
@@ -36,7 +59,7 @@ const Portfolio = () => {
             // offset:["start start", "end end"]
         })
 
-        const y = useTransform(scrollYProgress, [0,1], [-200,160])
+        const teeY = useTransform(scrollYProgress, [0,1], [-200,180])
         return <section>
             <div className="container" >
                 <div className="wrapper">
@@ -45,10 +68,13 @@ const Portfolio = () => {
                     </div>
                   
 
-                    <motion.div className="textContainer"style={{y}}>
+                    <motion.div className="textContainer">
                         <h2>{item.title}</h2>
                         <p>{item.desc}</p>
-                        <button>see demo</button>
+                        <Link to={item.path}>
+                            <button>see demo</button>
+                        </Link>
+                        
                     </motion.div>
                 </div>
                 

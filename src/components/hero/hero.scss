@@ -4,7 +4,7 @@
     background: linear-gradient((100deg, #0c0c1d, #111111, #111132));
     overflow: hidden;
     position: relative;
-    // margin-right: 0 20px;
+    margin: 0 20px;
 
     .wrapper{
         max-width: 1024px;
@@ -58,7 +58,7 @@
         height:100%;
         position: absolute;
         top: 0;
-        // right: 5%;
+        right: 0;
         margin-right: 20px;
 
 
@@ -73,7 +73,7 @@
             width: 100%;
             top: unset;
             bottom: 0;
-            margin-right: 0 ;
+            margin: 0 ;
             padding: 0 30px;
         }
     }
