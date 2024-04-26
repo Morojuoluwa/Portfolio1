@@ -1,5 +1,6 @@
 import './hero.scss'
 import { motion } from 'framer-motion'
+import { Link, animateScroll } from 'react-scroll'
 import React from 'react'
 const textVariant = {
     initial:{
@@ -41,8 +42,12 @@ const Hero = () => {
                 <motion.h2  variants={textVariant}>Patrick Abimbola</motion.h2>
                 <motion.h1  variants={textVariant}>Front-End developer</motion.h1>
                 <motion.div  variants={textVariant} className='button'>
+                <Link to='portfolio' smooth={true} duration={300}>
                     <motion.button  variants={textVariant}>See the latest works</motion.button>
+                </Link>
+                <Link to='contact' smooth={true} duration={300}>
                     <motion.button  variants={textVariant}>Contact me</motion.button>
+                </Link>
                 </motion.div>
 
             </motion.div>
@@ -52,9 +57,7 @@ const Hero = () => {
                 <img className='emg' src='/pic.png'/>
             </div>
         </div>
-        <motion.div className="slid" variants={slideVariant} initial="initial" animate="animate">
-            Content creator Influencer Gamer
-        </motion.div>
+        
         
       
     </div>

@@ -12,15 +12,25 @@
         height: 100%;
         max-width: 1024px;
         margin: auto;
-    
-       
-
-
+        
+        
+        
+        
         @include mobile{
             justify-content: flex-end;
             padding: 0 20px;
         }
+        
 
+        @include small{
+            padding-left: 100px;
+            padding-right: 20px;
+        }
+
+        @include large{
+            padding: 0px;
+         
+        }
 
         h2{
             font-weight: bold;

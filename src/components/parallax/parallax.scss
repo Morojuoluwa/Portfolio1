@@ -26,11 +26,6 @@
         background-image: url("/mountains.png");
         background-size: cover;
         z-index: 3;
-
-        // @include mobile{
-        //    background-size: cover;
-        //    background-repeat: no-repeat;
-        // }
     }
 
     
@@ -42,13 +37,6 @@
         background-image: url("/planets.png");
         background-size: cover;
         z-index: 2;
-
-
-        
-        // @include mobile{
-        //     background-size: cover;
-        //     background-repeat: no-repeat;
-        //  }
     }
 
     

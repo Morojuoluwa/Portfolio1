@@ -30,11 +30,11 @@ const Services = () => {
             <div className="title">
                 <img src='/people.webp' alt=''/>
                 <h1>
-                    <motion.b whileHover={{color:"orange"}}>Unique</motion.b> ideas
+                    <motion.b className='bee' whileHover={{color:"orange"}}>Unique</motion.b> ideas
                 </h1>
             </div>
             <div className="title">
-                <h1>For your <motion.b whileHover={{color:"orange"}}>Business</motion.b></h1>
+                <h1>For your <motion.b className="bee" whileHover={{color:"orange"}}>Business</motion.b></h1>
                 <button>What we do</button>
             </div>
         </motion.div>
@@ -42,13 +42,13 @@ const Services = () => {
             <motion.div whileHover={{background:"lightgray", color:"black"}} className="box">
                 <h2>Web design</h2>
                 <p>
-                  Creating captivating and conversion-focused websites that are visually stunning. We specialise in bringing your brand to life through seamless user interfaces.  
+                  Creating captivating and conversion-focused websites that are visually stunning. I specialise in bringing your brand to life through seamless user interfaces.  
                 </p>
             </motion.div>
             <motion.div whileHover={{background:"lightgray", color:"black"}} className="box">
                 <h2>Web development</h2>
                 <p>
-                    With a keen eye for design and a passion for innovation, we specialize in the development of websites at a professional level, creating dynamic and responsive websites that stand out in today's digital world
+                    With a keen eye for design and a passion for innovation, I specialize in the development of websites at a professional level, creating dynamic and responsive websites that stand out in today's digital world
                 </p>
             </motion.div>
         </motion.div>

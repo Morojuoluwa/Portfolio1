@@ -4,12 +4,8 @@
     background: linear-gradient((100deg, #0c0c1d, #111111, #111132));
     overflow: hidden;
     position: relative;
-    margin: 0 20px;
-
     .wrapper{
-        max-width: 1024px;
         height: 100%;
-        margin: auto;
         display: flex;
 
         @include mobile{
@@ -21,10 +17,12 @@
             display: flex;
             flex-direction: column;
         }
+        @include large{
+            flex-direction: row;
+            width: 100%;
+        }
 
         .textContainer{
-            // height: 100%;
-            // width: 50%;
             display: flex;
             flex: 1;
             justify-content: center;
@@ -33,8 +31,6 @@
             padding: 10px 0;
 
             @include mobile{
-                // height: 50%;
-                // width: 100%;
                 gap: 20px;
           
                 align-items: center;
@@ -42,11 +38,7 @@
             }
 
             @include small{
-                // height: 45%;
-                // width: 100%;
                 gap: 20px;
-                // background-color: yellowgreen;
-                align-items: center;
                 text-align: center;
                 padding-bottom: 0;
             }
@@ -74,29 +66,26 @@
                 margin-right: 20px;
                 cursor: pointer;
                 font-weight: 300;
+
+                
             }
         }
     }
 
     .imgContainer{
-        // height:100%;
-        // position: absolute;
-        // top: 0;
-        // right: 0;
-        // margin-right: 20px;
-
         flex: 1;
         width: 80%;
         margin: auto;
+   
 
         img{
             width: 100%;
           height: 100%;
           object-fit: cover;
 
-        //   @include mobile{
-        //     z-index: 999;
-        //   }
+          @include large{
+            width: 80%;
+          }
         }
 
         @include mobile{
@@ -109,27 +98,16 @@
             padding: 0 30px;
         }
 
-        @include small{
-            // height: 50%;
-            // width: 100%;
-            // top: unset;
-            // bottom: 0;
-          
-            // margin: 0 ;
-            // padding: 0 30px;
+        
 
+        
+        @include large{
+        
+        margin-left: 50px;
+      
+        
+    
         }
-    }
-   
 
-    .slid{
-        
-        position: absolute;
-        font-size: 30vh;
-        bottom: 120px;
-        white-space: nowrap;
-        color: #ffffff09;
-        width: 50%;
-        
-    }
+    } 
 }

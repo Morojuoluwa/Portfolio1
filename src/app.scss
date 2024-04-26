@@ -33,24 +33,19 @@ a{
 }
 
 @mixin mobile{
-    @media (max-width:640px){
+    @media (max-width:630px){
         @content
     }
 }
 
 @mixin small {
-    @media (max-width: 768px) {
+    @media (min-width: 640px) {
         @content;
     }
 }
 
-// @mixin small-screen {
-//     @media (max-width:768px){
-//         @content
-//     }
-
-// }
-
-// @mixin large{
-    
-// }
+@mixin large{
+    @media (min-width:1024px){
+        @content
+    }
+}

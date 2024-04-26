@@ -2,13 +2,9 @@
 
 .portfolio{
     position: relative;
-
-    
-    // @include mobile{
-    //   display: flex;
-    //   flex-direction: column; 
-    //  }
-
+        @include small {
+            padding-right:  20px;
+        }
 
 
     .progress{
@@ -26,9 +22,7 @@
            padding-top: calc(100vh - 80px);
            font-size: 20px;
         }
-       
     }
-
     .progressBar{
         height: 5px;
         background-color: white;
@@ -45,9 +39,17 @@
 
         
         @include mobile{
+            margin-top: 40%;
+            padding: 0px 20px;
+         }
+
+         @include small{
             margin-top: 30%;
          }
 
+         @include large{
+            margin-top: 20px;
+         }
 
         .wrapper{
             max-width: 1024px;
@@ -61,6 +63,20 @@
             
         @include mobile{
             flex-direction: column;
+            gap: 10px;
+            margin-top: 0;
+            justify-content: start;
+           
+        }
+
+        @include small{
+            flex-direction: column;
+            height: 100%;
+             justify-content: start;
+        }
+
+        @include large{
+            flex-direction: row;
         }
 
             .imageContainer{
@@ -70,11 +86,19 @@
                 
             @include mobile{
                 width: 100%;
+                max-height: 200px;
+                padding: 0 20px;
+            }
+
+            @include small{
+                width: 100%;
                 max-height: 300px;
                 padding: 0 20px;
             }
 
-
+            @include large{
+                height: 50%;
+            }
                 img{
                     
                     height: 100%;
@@ -89,17 +113,31 @@
         
 
         .textContainer{
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-
-            
             @include mobile{
                 transform: none !important;
-                padding: 10px;
+                padding: 0 10px;
                 align-items: center;
                 text-align: center;
+            }
+
+            @include small{
+                transform: none !important;
+                max-width: 80%;
+                padding:0 30px;
+                align-items: center;
+                text-align: center;
+            }
+
+            @include large{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                height: 50%;
+                text-align: left;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 5px 20px;
+               
             }
 
             h2{
@@ -108,7 +146,19 @@
                     
             @include mobile{
                 font-size: 30px;
+                margin-bottom: 10px;
                 
+            }
+
+            @include small{
+                margin-bottom: 16px;
+            }
+
+            @include large{
+                font-size: 40px;
+                padding-top: 0;
+                margin-bottom: 6px;
+
             }
             }
 
@@ -118,7 +168,16 @@
 
                 @include mobile{
                     font-size: 14px;
+                    margin-bottom: 20px;
                     
+                }
+
+                @include small{
+                    margin-bottom: 16px;
+                }
+
+                @include large{
+                    margin-bottom: 8px;
                 }
             }
 
@@ -129,6 +188,16 @@
                 padding: 10px 0;
                 width: 100px;
                 cursor: pointer;
+
+                @include small{
+                    width: 160px;
+                    padding: 16px 0;
+                }
+
+                @include large{
+                    width: 100px;
+                    padding: 10px 0;
+                }
             }
         }
     }

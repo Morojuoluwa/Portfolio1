@@ -8,22 +8,45 @@
     justify-content: space-between;
     padding-bottom: 20px;
 
+    @include small{
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
 
     .textContainer{
-        flex: 1;
         align-self: flex-end;
         display: flex;
         align-items: center;
         gap: 20px;
 
         @include mobile{
-            // align-self: center;
-            // text-align: center;
             flex-direction: column;
-
+            flex: none;
             padding-right: 10px;
             padding-top: 20px;
+            margin-bottom: 10%;
         }
+
+        @include small{
+            padding-top: 5px;
+            flex-direction: row;
+            flex: none;
+            padding-right: 10px;
+            padding-top: 20px;
+            margin-bottom: 18%;
+        }
+
+        @include large {
+            flex: 1;
+            margin-bottom: 20px;
+            flex-direction: row;
+            align-self: flex-end;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
 
         p{
             font-weight: 200;
@@ -45,6 +68,14 @@
             @include mobile{
                 width: 200px;
             }
+
+            @include small{
+                width: 120px;
+            }
+
+            @include large{
+                width: 300px;
+            }
         }
     }
 
@@ -57,32 +88,76 @@
         
         @include mobile{
             width: 100%;
+            flex: none;
+            margin-bottom: 6%;
+           
+        }
+        @include small{
+            width: 100%;
+            flex: none;
+            margin-bottom: 12%;
+        }
+        @include large{
+            margin-bottom: 20px;
+            flex: 2;
         }
 
-        .title{
-            display: flex;
-            gap: 20px;
-            align-items: center;
+        @include large{
+            flex: 2;
+        }
 
-
-            
+        .title{ 
             @include mobile{
-                flex-direction: column;
-                text-align: center;
+                display: flex;
+                flex-direction: row;
                 gap: 10px;
+                align-items: center;
+            }
+
+            @include small{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+
+            }
+
+            @include large{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: center;
+
             }
 
 
             img{
-                width: 120px;
+                
+               
+
+                
+            @include mobile{
+                width: 60px;
+                height: 30px;
+                border-radius: 50px;
+                
+            }
+
+            @include small{
+                display: inline-block;
+                width: 100px;
                 height: 50px;
                 border-radius: 50px;
+                margin-bottom: 0;
                 object-fit: cover;
+                padding-bottom: 0;
+            }
 
-                    
-            @include mobile{
-                width: 100px;
-                height: 40px;
+            @include large{
+                display: inline-block;
+                width: 120px;
+                height: 50px;
+                object-fit: cover;
             }
             }
 
@@ -90,14 +165,22 @@
                 font-size: 76px;
                 font-weight: 100;
 
+                b{
+                    @include mobile{
+                        color: orange;
+                    }
+                }
                 
             @include mobile{
                 font-size: 36px;
             }
 
+            @include small {
+                font-size: 66px;
+            }
+
             }
             button{
-            // width: 120px;
             height: 50px;
             border-radius: 50px;
             background-color: orange;
@@ -110,7 +193,15 @@
             @include mobile{
              padding: 0 10px;   
              font-size: 16px;
+            margin-top: 20px;
+            display: none;
             }
+                 
+            @include small{
+                padding: 0 10px;   
+                font-size: 16px;
+               margin-top: 20px;
+               }
             }
             
         }
@@ -126,28 +217,72 @@
             flex-direction: column;
             width: 100%;
             margin-top: 20px;
+            flex: none;
             
+           }
+
+           @include small{
+            flex-direction: row;
+            width: 100%;
+            margin-top: 20px;
+            flex: none;
+            
+           }
+
+           @include large{
+            flex: 2;
+            flex-direction: row;
+            max-width: 660px;
            }
 
 
 
         .box{
-            padding: 20px;
-            width: 400px;
-            border: 0.5px solid gray;
-            display: flex;
-            flex-direction: column;
-            // justify-content: space-between;
-            gap: 20px;
+            h2{
+                @include mobile{
+                    color: orange;
+                    margin-bottom: 8px;
+                }
+
+                @include small{
+                    margin-bottom: 10px;
+                    
+                }
+            }
+
+            p{
+                font-size: 20px;
+            }
 
             @include mobile{
             width: 280px;
             margin: auto;
             border: none;
             padding: 0;
-            margin-bottom: 20px;
+            margin-bottom: 15%;
             gap: 10px;
+         
            
+            }
+
+            @include small{
+                width: 300px;
+                height: 280px;
+                margin: auto;
+                border: none;
+                padding: 20px 20px;
+                margin-bottom: 16px;
+                gap: 10px;
+                border: 0.5px solid gray;
+            }
+
+            @include large{
+                padding: 20px;
+                width: 400px;
+                border: 0.5px solid gray;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
             }
  
         }

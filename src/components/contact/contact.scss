@@ -1,13 +1,6 @@
 @import '../../app.scss';
 
 .contact{
-    height: 100%;
-    max-width: 1024px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-
         
     @include mobile{
        width: 100%;
@@ -16,19 +9,50 @@
        margin-top: 10%;
     }
 
-    .textContainer{
-        flex: 1;
-        display: flex;
+    @include small {
+        width: 100%;
+        padding: 10px 30px;
         flex-direction: column;
+        margin-top: 10%;
+       
+    }
+
+    @include large{
+        height: 100%;
+        max-width: 1024px;
+        margin: auto;
+        display: flex;
+        align-items: center;
         gap: 40px;
+        flex-direction: row;
+    }
 
-
-            
+    .textContainer{        
         @include mobile{
+            align-items: center;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        @include small{
             gap: 20px;
             align-items: center;
             text-align: center;
             margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        @include large{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
+            justify-content: center;
+            text-align: left;
+           align-items: flex-start;
+    
+    
         }
 
 
@@ -40,22 +64,60 @@
         @include mobile{
         font-size: 50px;   
         }
+        @include small {
+            font-size: 60px;
+        }
 
         }
 
-        span{
-            font-weight: 300;
+        .item{
+
+            @include mobile{
+
+                margin-bottom: 10px;
+            }
+
+            @include small{
+                margin-bottom: 20px;
+            }
+
+            @include large{
+                margin-bottom: 0px;
+            }
+
+            span{
+                font-weight: 300;
+    
+                @include mobile {
+                    margin-bottom: 10px;
+                }
+    
+                @include small {
+                    font-size: 20px;
+                   
+                }
+            }
         }
+
+        
     }
 
-    .formContainer{
-        flex:1;
-        position: relative;
-
-            
+    .formContainer{          
         @include mobile{
             padding: 10px;
             width: 100%;
+        }
+
+        @include small{
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include large{
+            flex:1;
         }
 
 
@@ -69,6 +131,7 @@
           margin: auto;
         }
 
+
             svg{
                 fill: orange;
 
@@ -76,6 +139,12 @@
             @include mobile{
                 width: 300px;
                 height: 300px;
+            }
+
+            @include small {
+                width: 350px;
+                height: 350px;
+               
             }
             }
 
@@ -89,6 +158,10 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+            @include small {
+                width: 100%;
+            }
             
         }
 
@@ -107,6 +180,11 @@
 
 
         }
+        textarea{
+            @include mobile{
+                max-height: 100px;
+            }
+        }
 
         button{
             padding: 20px;
@@ -114,6 +192,12 @@
             background-color: orange;
             cursor: pointer;
             font-weight: 500;
+        }
+        @include mobile{
+            margin-bottom: 20%;
+        }
+        @include large{
+            margin-bottom: 10px;
         }
     }
 
