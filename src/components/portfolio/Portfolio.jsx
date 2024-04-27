@@ -51,15 +51,10 @@ const Portfolio = () => {
     ]
 
     const Single = ({item}) =>{
+    //     const handleClick = () => {
+    //     window.location.href = item.path; // Redirect to the specified URL
+    // };
 
-        const ref = useRef()
-
-        const {scrollYProgress} = useScroll({
-            target:ref,
-            // offset:["start start", "end end"]
-        })
-
-        const teeY = useTransform(scrollYProgress, [0,1], [-200,180])
         return <section>
             <div className="container" >
                 <div className="wrapper">

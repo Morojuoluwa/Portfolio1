@@ -11,7 +11,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 const App = () => {
   return (
     <Router>
-      <Cursor/>
+      {/* <Cursor/> */}
       <section id='homepage'>
         <Navbar/>
         <Hero/>
