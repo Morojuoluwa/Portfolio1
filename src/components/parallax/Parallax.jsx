@@ -12,7 +12,7 @@ const ref = useRef()
   const yText = useTransform(scrollYProgress, [0,1], ["0%", "400%"])
   return (
     <div ref={ref} className='parallax' style={{background: type==="services"? "linear-gradient(180deg, #111132, #0c0c1d)":"linear-gradient(180deg, #111132, #505064)"}}>
-      <motion.h1 style={{y:yText}}>{type === "services"? "Services": "What we do"}</motion.h1>
+      <motion.h1 style={{y:yText}}>{type === "services"? "Services": "What i offer"}</motion.h1>
       <motion.div className='mountains'></motion.div>
       <motion.div style={{y:yBg}} className='planets'></motion.div>
       <motion.div style={{x:yBg}} className='stars'></motion.div>
